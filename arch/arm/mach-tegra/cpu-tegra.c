@@ -823,8 +823,7 @@ static int __init tegra_cpufreq_init(void)
 		&tegra_cpufreq_policy_nb, CPUFREQ_POLICY_NOTIFIER);
 	if (ret)
 		return ret;
-	
-	register_early_suspend(&tegra_cpu_early_suspend_handler);
+
 	return cpufreq_register_driver(&tegra_cpufreq_driver);
 }
 
