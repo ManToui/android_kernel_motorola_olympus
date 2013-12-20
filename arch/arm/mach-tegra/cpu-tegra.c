@@ -826,7 +826,7 @@ static int __init tegra_cpufreq_init(void)
 
 	register_early_suspend(&tegra_cpu_early_suspend_handler);
 
-	reeurn cpufreq_register_driver(&tegra_cpufreq_driver);
+	return cpufreq_register_driver(&tegra_cpufreq_driver);
 }
 
 static void __exit tegra_cpufreq_exit(void)
